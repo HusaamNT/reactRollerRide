@@ -1,22 +1,28 @@
 const { Schema, Model } = require("mongoose");
 
 const bookingsSchema = new Schema({
-  id: mongoose.Schema.Types.ObjectId,
+  _id: mongoose.Schema.Types.ObjectId,
   package: {
     type: String,
-    required: true,
+    required: true
   },
   userId: {
     type: Schema.Types.ObjectId,
-    ref: "User",
+    ref: "User"
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    get: (createdAt) => {
-      return new Date(createdAt).toLocaleString();
-    },
+  dateField: {
+    type: Date
   },
+  childrenTickets: {
+    type: Number,
+    required: true,
+    default: 0
+  },
+  adultTickets: {
+    type: Number,
+    required: true,
+    default: 1
+  }
 });
 
 const Bookings = mongoose.model('Bookings', bookingsSchema);
