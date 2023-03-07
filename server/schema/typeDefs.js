@@ -9,10 +9,10 @@ const typeDefs = gql`
   }
   type Bookings {
     _id: ID!
-    package: Strings!
-    dateField: Date!
-    childrenTickets: Number
-    adultTickets: Number
+    package: String!
+    dateField: String!
+    childrenTickets: Int
+    adultTickets: Int
   }
   type Auth {
     token: ID!

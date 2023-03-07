@@ -1,5 +1,5 @@
-const Profile = require('./Profile')
+const user = require("./User");
 
 module.exports = {
-  Profile
-}
+  user,
+};
