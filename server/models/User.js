@@ -25,6 +25,10 @@ const userSchema = new Schema({
     }
 });
 
-const User = mongoose.Model('User', userSchema);    
+profileSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
+
+const User = mongoose.Model("User", userSchema);
 
 module.exports = User;
