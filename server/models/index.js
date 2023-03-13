@@ -1,5 +1,9 @@
-const Profile = require('./Profile')
+const user = require("./User");
+const Bookings = require("./Bookings");
+const Packages = require("./packages");
 
 module.exports = {
-  Profile
-}
+  user,
+  Bookings,
+  Packages,
+};

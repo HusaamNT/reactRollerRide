@@ -1,0 +1,12 @@
+[
+  { "ticketName": "Adult", "passType": "1 Day", "ticketPrice": 20.0 },
+  { "ticketName": "Child", "passType": "1 Day", "ticketPrice": 10.0 },
+  { "ticketName": "Adult", "passType": "2 Day", "ticketPrice": 35.0 },
+  { "ticketName": "Child", "passType": "2 Day", "ticketPrice": 15.0 },
+  { "ticketName": "Adult", "passType": "Bronze", "ticketPrice": 100.0 },
+  { "ticketName": "Child", "passType": "Bronze", "ticketPrice": 50.0 },
+  { "ticketName": "Adult", "passType": "Silver", "ticketPrice": 150.0 },
+  { "ticketName": "Child", "passType": "Silver", "ticketPrice": 70.0 },
+  { "ticketName": "Adult", "passType": "Gold", "ticketPrice": 200.0 },
+  { "ticketName": "Child", "passType": "Gold", "ticketPrice": 100.0 }
+]
