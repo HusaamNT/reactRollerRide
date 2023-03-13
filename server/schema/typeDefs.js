@@ -16,6 +16,7 @@ const typeDefs = gql`
   }
   type Auth {
     token: ID!
+    user: User!
   }
   type Query {
     users: [User]
@@ -23,6 +24,14 @@ const typeDefs = gql`
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
+    bookTicket(
+      package: String!
+      dateField: String!
+      childrenTickets: Int
+      adultTickets: Int
+    ): Bookings
+    deleteBooking(id: ID!): Bookings
+    deleteUser(id: ID!): User
   }
 `;
 

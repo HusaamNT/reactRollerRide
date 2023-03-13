@@ -1,30 +1,30 @@
-const { Schema, Model } = require("mongoose");
+const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const bookingsSchema = new Schema({
-  _id: mongoose.Schema.Types.ObjectId,
   package: {
     type: String,
-    required: true
+    required: true,
   },
   userId: {
     type: Schema.Types.ObjectId,
-    ref: "User"
+    ref: "User",
   },
   dateField: {
-    type: Date
+    type: String,
   },
   childrenTickets: {
     type: Number,
     required: true,
-    default: 0
+    default: 0,
   },
   adultTickets: {
     type: Number,
     required: true,
-    default: 1
-  }
+    default: 1,
+  },
 });
 
-const Bookings = mongoose.model('Bookings', bookingsSchema);
+const Bookings = model("Bookings", bookingsSchema);
 
 module.exports = Bookings;

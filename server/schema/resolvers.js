@@ -1,6 +1,7 @@
-// const { Profile } = require('../models');
 const User = require("../models/User");
 const { signToken } = require("../utils/auth.js");
+const bookTicket = require("../models/Bookings");
+const Bookings = require("../models/Bookings");
 
 const resolvers = {
   Query: {
@@ -34,6 +35,28 @@ const resolvers = {
       });
       const token = signToken(user);
       return { token };
+    },
+    bookTicket: async (
+      _,
+      { package, dateField, childrenTickets, adultTickets }
+    ) => {
+      const bookTicket = await Bookings.create({
+        package,
+        dateField,
+        childrenTickets,
+        adultTickets,
+      });
+      return bookTicket;
+    },
+    deleteBooking: async (_, { id }) => {
+      const deleteBooking = await Bookings.findByIdAndDelete({
+        _id: id,
+      });
+      return deleteBooking;
+    },
+    deleteUser: async (_, { id }) => {
+      const deleteUser = await User.findByIdAndDelete(id);
+      return deleteUser;
     },
   },
 };
