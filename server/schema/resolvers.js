@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const { signToken } = require("../utils/auth.js");
 const Bookings = require("../models/Bookings");
+const Package = require("../models/packages");
 
 const resolvers = {
   Query: {
@@ -22,6 +23,9 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+    getAllPackages: async () => {
+      return await Package.find();
     },
   },
 

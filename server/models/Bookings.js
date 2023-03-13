@@ -3,8 +3,9 @@ const bcrypt = require("bcrypt");
 
 const bookingsSchema = new Schema({
   package: {
-    type: String,
+    type: Schema.Types.ObjectId,
     required: true,
+    ref: "Packages",
   },
   userId: {
     type: Schema.Types.ObjectId,

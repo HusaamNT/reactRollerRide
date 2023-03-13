@@ -9,10 +9,17 @@ const typeDefs = gql`
   }
   type Bookings {
     _id: ID!
-    package: String!
+    user: User
+    package: Packages!
     dateField: String!
     childrenTickets: Int
     adultTickets: Int
+  }
+  type Packages {
+    _id: ID!
+    ticketName: String!
+    passType: String!
+    ticketPrice: Int!
   }
   type Auth {
     token: ID!
@@ -21,11 +28,13 @@ const typeDefs = gql`
   type Query {
     users: [User]
     login(username: String!, password: String!): Auth
+    getAllPackages: [Packages]
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     bookTicket(
-      package: String!
+      package: ID!
+      user: ID!
       dateField: String!
       childrenTickets: Int
       adultTickets: Int

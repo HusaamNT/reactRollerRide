@@ -1,12 +1,13 @@
+require("dotenv").config();
 const db = require("../config/connection");
-const { Bookings } = require("../models");
+const { Packages } = require("../models");
 
 const tpData = require("../seeds/tpData.json");
 
 db.once("open", async () => {
-  await Bookings.deleteMany({});
+  //await Packages.deleteMany({});
 
-  const Bookings = await Bookings.insertMany(Bookings);
+  const packagesData = await Packages.insertMany(tpData);
 
   console.log("Theme Park Data Seeded!");
   process.exit(0);
