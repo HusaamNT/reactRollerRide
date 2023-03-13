@@ -2,6 +2,7 @@ const User = require("../models/User");
 const { signToken } = require("../utils/auth.js");
 const Bookings = require("../models/Bookings");
 const Package = require("../models/packages");
+const Blog = require("../models/Blog");
 
 const resolvers = {
   Query: {
@@ -26,6 +27,12 @@ const resolvers = {
     },
     getAllPackages: async () => {
       return await Package.find();
+    },
+    getAllBlogs: async () => {
+      return await Blog.find();
+    },
+    getOneBlog: async ({ _id }) => {
+      return await Blog.findById(_id);
     },
   },
 
@@ -60,6 +67,20 @@ const resolvers = {
     deleteUser: async (_, { id }) => {
       const deleteUser = await User.findByIdAndDelete(id);
       return deleteUser;
+    },
+    createBlog: async (_, { userId, title, post }) => {
+      const createBlog = await Blog.create({
+        userId,
+        title,
+        post,
+      });
+      return createBlog;
+    },
+    deleteBlog: async (_, { userId }) => {
+      const deleteBlog = await Blog.findOneAndDelete({
+        userId,
+      });
+      return deleteBlog;
     },
   },
 };
