@@ -1,6 +1,5 @@
 const User = require("../models/User");
 const { signToken } = require("../utils/auth.js");
-const bookTicket = require("../models/Bookings");
 const Bookings = require("../models/Bookings");
 
 const resolvers = {
