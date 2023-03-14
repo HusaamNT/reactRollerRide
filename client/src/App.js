@@ -1,3 +1,20 @@
+ react-front
+import React from 'react';
+import Navbar from '../components/Navbar';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import './App.css';
+
+function App() {
+  return (
+    <>
+    <Router>
+      <Navbar/>
+      <Switch>
+        <Route path='/' exact />
+      </Switch>
+    </Router>
+
+    </>
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
@@ -46,6 +63,7 @@ function App() {
       <Footer />
     </Router>
   </ApolloProvider>
+  main
   );
 }
 
