@@ -7,7 +7,6 @@
     "build": "cd client && npm run build"
   },
   "dependencies": {
-    "concurrently": "^7.6.0",
-    "node-fetch": "^2.6.9"
+    "concurrently": "^7.6.0"
   }
 }
