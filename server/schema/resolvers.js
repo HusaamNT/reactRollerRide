@@ -44,7 +44,7 @@ const resolvers = {
         password,
       });
       const token = signToken(user);
-      return { token };
+      return { token, user };
     },
     bookTicket: async (
       _,

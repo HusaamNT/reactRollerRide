@@ -9,6 +9,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 
 import Home from "./pages/Home";
+import Tickets from "./pages/Tickets";
 import Header from "./shared/Header";
 import Footer from "./shared/Footer";
 
@@ -40,6 +41,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/tickets" element={<Tickets />} />
       </Routes>
       <Footer />
     </Router>

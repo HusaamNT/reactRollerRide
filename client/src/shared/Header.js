@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
+
 function Header() {
     return (
         <header>
             <nav className="navbar navbar-expand-md navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">
+                    <Link className="navbar-brand" to={'/'}>
                         RollerRide
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -20,14 +22,9 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    Home
-                                </a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    Features
-                                </a>
+                                <Link className="nav-link" to={'/tickets'}>
+                                    Tickets
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">
