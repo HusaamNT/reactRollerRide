@@ -21,6 +21,11 @@ const typeDefs = gql`
     passType: String!
     ticketPrice: Int!
   }
+  type Blog {
+    user: User
+    title: String!
+    post: String!
+  }
   type Auth {
     token: ID!
     user: User!
@@ -29,6 +34,8 @@ const typeDefs = gql`
     users: [User]
     login(username: String!, password: String!): Auth
     getAllPackages: [Packages]
+    getAllBlogs: [Blog]
+    getOneBlog(_id: ID!): Blog
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
@@ -41,6 +48,8 @@ const typeDefs = gql`
     ): Bookings
     deleteBooking(id: ID!): Bookings
     deleteUser(id: ID!): User
+    createBlog(userId: ID!, title: String!, post: String!): Blog
+    deleteBlog(userId: ID!): Blog
   }
 `;
 
