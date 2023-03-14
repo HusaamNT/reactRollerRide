@@ -23,7 +23,7 @@ function Home() {
                             }
                             <p>Book the day of a lifetime!</p>
                             <p>
-                                Sign up now to get a great deal on the perfect
+                                {AuthService.loggedIn() ? "Book now" : "Sign up now"} to get a great deal on the perfect
                                 family day out.
                             </p>
                            { AuthService.loggedIn() ? <Link to={'/tickets'}>Buy Tickets</Link> : <LoginForm/> }
