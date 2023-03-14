@@ -1,8 +1,33 @@
-import React from 'react'
+import React ,{useState} from 'react'
 
 function Navbar() {
   return (
-    <div>Navbar</div>
+    <>
+    <nav className='navbar'>
+        <div className='navbar-container'>
+            <link to="/" className="navbar-logo">
+                Roller-Ride
+                
+            </link>
+            
+            
+
+        </div>
+
+
+
+
+
+
+    </nav>
+    
+    
+    
+    
+    
+    </>
+
+    
   )
 }
 
