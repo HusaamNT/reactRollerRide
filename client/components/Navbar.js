@@ -23,24 +23,27 @@ function Navbar() {
                 </Link>
             </li>
             <li className='nav-item'>
-                <Link to='/' className='nav-links'>
+                <Link to='/About' className='nav-links'>
                     About
                 </Link>
             </li>
-
-
+            <li className='nav-item'>
+                <Link to='/Rides' className='nav-links'>
+                    Rides
+                </Link>
+            </li>
+            <li className='nav-item'>
+                <Link to='/Bookings' className='nav-links'>
+                    Bookings
+                </Link>
+            </li>
+            <li className='nav-item'>
+                <Link to='/Sign-Up' className='nav-links'>
+                    Sign-Up
+                </Link>
+            </li>
           </ul>
-            
-
-            
-
         </div>
-
-
-
-
-
-
     </nav>
     
     
