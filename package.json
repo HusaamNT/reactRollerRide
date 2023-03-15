@@ -7,6 +7,7 @@
     "build": "cd client && npm run build"
   },
   "dependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "moongoose": "^0.0.5"
   }
 }
