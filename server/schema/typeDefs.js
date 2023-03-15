@@ -90,6 +90,31 @@ const typeDefs = gql`
   type ThreeDSecureUsage {
     supported: Boolean
   }
+  type Customer {
+    id: ID!
+    email: String!
+    name: String!
+  }
+  
+  type Charge {
+    id: ID!
+    amount: Int!
+    currency: String!
+    customer: Customer!
+  }
+  
+  input CustomerInput {
+    email: String!
+    name: String!
+    cardId: String!
+  }
+  
+  input ChargeInput {
+    amount: Int!
+    customerId: String!
+    cardId: String!
+  }
+
   type Query {
     users: [User]
     login(username: String!, password: String!): Auth
@@ -112,6 +137,8 @@ const typeDefs = gql`
     deleteUser(id: ID!): User
     createBlog(userId: ID!, title: String!, post: String!): Blog
     deleteBlog(userId: ID!): Blog
+    createCustomer(input: CustomerInput!): Customer!
+    chargeCustomer(input: ChargeInput!): Charge!
   }
 `;
 
