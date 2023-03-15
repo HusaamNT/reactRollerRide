@@ -26,6 +26,11 @@ const navLinks = [
     path: "/contact",
     display: "Contact",
   },
+
+  {
+    path: "/login",
+    display: "Login",
+  },
 ];
 
 const Header = () => {
@@ -50,11 +55,11 @@ const Header = () => {
 
             <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                <Link to="#" className=" d-flex align-items-center gap-1">
+                <Link to="/login" className=" d-flex align-items-center gap-1">
                   <i class="ri-login-circle-line"></i> Login
                 </Link>
 
-                <Link to="#" className=" d-flex align-items-center gap-1">
+                <Link to="/login" className=" d-flex align-items-center gap-1">
                   <i class="ri-user-line"></i> Register
                 </Link>
               </div>

@@ -6,6 +6,7 @@ import CarListing from "../pages/CarListing";
 import CarDetails from "../pages/CarDetails";
 import Blog from "../pages/Blog";
 import BlogDetails from "../pages/BlogDetails";
+import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
 import Contact from "../pages/Contact";
 
@@ -19,6 +20,7 @@ const Routers = () => {
       <Route path="/rides/:slug" element={<CarDetails />} />
       <Route path="/blogs" element={<Blog />} />
       <Route path="/blogs/:slug" element={<BlogDetails />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
