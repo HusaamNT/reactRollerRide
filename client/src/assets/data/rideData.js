@@ -3,24 +3,19 @@ import img01 from "../all-images/rides-img/img2.jpg";
 import img02 from "../all-images/rides-img/img3.jpg";
 import img03 from "../all-images/rides-img/img5.jpg";
 
-
-const carData = [
+const rideData = [
   {
     id: 1,
-  
     rating: 112,
-    rideName: "Tesla Malibu",
+    rideName: "",
     imgUrl: img01,
-
     price: 50,
-   
     description:
       " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
   },
 
   {
     id: 2,
-
     rating: 102,
     rideName: "Splash Mountain",
     imgUrl: img02,
@@ -31,16 +26,13 @@ const carData = [
 
   {
     id: 3,
-    
     rating: 132,
     rideName: "",
     imgUrl: img03,
-
     price: 65,
-   
     description:
       " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
   },
 ];
 
-export default carData;
+export default rideData;

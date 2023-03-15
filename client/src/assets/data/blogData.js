@@ -1,7 +1,7 @@
 // import images from all-images/blog-img directory
 import img01 from "../all-images/blog-img/blog1.jpg";
 import img02 from "../all-images/blog-img/blog2.jpg";
-import img03 from "../all-images/blog-img/blog3.jpg";
+import img03 from "../all-images/ride1.jpg";
 
 const blogData = [
   {
