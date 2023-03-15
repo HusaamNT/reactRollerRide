@@ -9,8 +9,6 @@ function Home() {
         backgroundImage: `url(${rollerImage})`,
     };
 
-    console.log(AuthService.getProfile());
-
     return (
         <div style={style} className="hero d-flex align-items-center">
             <div className="container-lg bring-to-front">
