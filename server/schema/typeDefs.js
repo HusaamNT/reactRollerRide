@@ -1,6 +1,7 @@
 const gql = require("graphql-tag");
 
 const typeDefs = gql`
+
   type User {
     _id: ID!
     username: String!
@@ -34,6 +35,61 @@ const typeDefs = gql`
     token: ID!
     user: User!
   }
+  type PaymentMethod {
+    id: ID
+    object: String
+    billing_details: BillingDetails
+    card: Card
+    created: String
+    customer: String
+    livemode: Boolean
+    metadata: String
+    type: String
+  }
+  
+  type BillingDetails {
+    address: Address
+    email: String
+    name: String
+    phone: String
+  }
+  
+  type Address {
+    city: String
+    country: String
+    line1: String
+    line2: String
+    postal_code: String
+    state: String
+  }
+  
+  type Card {
+    brand: String
+    checks: CardChecks
+    country: String
+    exp_month: Int
+    exp_year: Int
+    fingerprint: String
+    funding: String
+    last4: String
+    networks: CardNetworks
+    three_d_secure_usage: ThreeDSecureUsage
+  }
+  
+  type CardChecks {
+    address_line1_check: String
+    address_postal_code_check: String
+    cvc_check: String
+  }
+  
+  type CardNetworks {
+    available: [String]
+    preferred: String
+  }
+  
+  type ThreeDSecureUsage {
+    supported: Boolean
+  }
   type Query {
     users: [User]
     login(username: String!, password: String!): Auth
@@ -41,6 +97,7 @@ const typeDefs = gql`
     getAllBlogs: [Blog]
     getOneBlog(_id: ID!): Blog
     getWeather(location: String): [Weather]
+    customerPaymentMethods(customerId: ID!): [PaymentMethod]
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth

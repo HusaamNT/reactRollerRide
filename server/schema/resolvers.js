@@ -107,23 +107,23 @@ const resolvers = {
       });
       return deleteBlog;
     },
-    createCustomer: async (_, { email, name, cardId }) => {
-      const customer = await stripe.customers.create({
-        email: email,
-        name: name,
-        source: cardId,
-      });
-      return customer;
-    },
-    chargeCustomer: async (_, { amount, customerId, cardId }) => {
-      const charge = await stripe.charges.create({
-        amount: amount,
-        currency: 'usd',
-        customer: customerId,
-        source: cardId,
-      });
-      return charge;
-    },
+    // createCustomer: async (_, { email, name, cardId }) => {
+    //   const customer = await stripe.customers.create({
+    //     email: email,
+    //     name: name,
+    //     source: cardId,
+    //   });
+    //   return customer;
+    // },
+    // chargeCustomer: async (_, { amount, customerId, cardId }) => {
+    //   const charge = await stripe.charges.create({
+    //     amount: amount,
+    //     currency: 'usd',
+    //     customer: customerId,
+    //     source: cardId,
+    //   });
+    //   return charge;
+    // },
   },
 };
 
