@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LoginForm from "../components/LoginForm";
+import LoginForm from "../components/Login/LoginForm";
 import rollerImage from "../images/rollercoaster.jpg";
 import AuthService from "../utils/AuthService";
 
