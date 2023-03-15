@@ -20,7 +20,8 @@
     "graphql-tag": "^2.12.6",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.10.0",
-    "node-fetch": "^2.6.9"
+    "node-fetch": "^2.6.9",
+    "stripe": "^11.14.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

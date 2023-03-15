@@ -5,6 +5,7 @@ const Package = require("../models/packages");
 const Blog = require("../models/Blog");
 const fetch = require("node-fetch");
 
+
 const resolvers = {
   Query: {
     users: async () => {
@@ -50,6 +51,13 @@ const resolvers = {
         array.push(weather);
       }
       return array;
+    },
+    customerPaymentMethods: async (_, { customerId }) => {
+      const paymentMethods = await stripe.paymentMethods.list({
+        customer: customerId,
+        type: 'card',
+      });
+      return paymentMethods.data;
     },
   },
 
@@ -98,6 +106,23 @@ const resolvers = {
         userId,
       });
       return deleteBlog;
+    },
+    createCustomer: async (_, { email, name, cardId }) => {
+      const customer = await stripe.customers.create({
+        email: email,
+        name: name,
+        source: cardId,
+      });
+      return customer;
+    },
+    chargeCustomer: async (_, { amount, customerId, cardId }) => {
+      const charge = await stripe.charges.create({
+        amount: amount,
+        currency: 'usd',
+        customer: customerId,
+        source: cardId,
+      });
+      return charge;
     },
   },
 };
