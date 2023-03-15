@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
-import { GET_TICKETS } from "../utils/Queries";
+import { GET_TICKETS } from "../utils/Quries";
 
 function Tickets () {
 

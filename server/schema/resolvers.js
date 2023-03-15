@@ -3,7 +3,6 @@ const { signToken } = require("../utils/auth.js");
 const Bookings = require("../models/Bookings");
 const Package = require("../models/packages");
 const Blog = require("../models/Blog");
-const fetch = require("node-fetch");
 
 const resolvers = {
   Query: {
@@ -34,22 +33,6 @@ const resolvers = {
     },
     getOneBlog: async ({ _id }) => {
       return await Blog.findById(_id);
-    },
-    getWeather: async () => {
-      const response = await fetch(
-        "https://api.openweathermap.org/data/2.5/forecast?q=London&appid=76119befad1d3879033ce0396274f555&units=metric"
-      );
-
-      const data = await response.json();
-      const array = [];
-      for (let i = 0; i < data.list.length; i += 8) {
-        const weather = {
-          weather: data.list[i].weather[0].main,
-          temp: data.list[i].main.temp,
-        };
-        array.push(weather);
-      }
-      return array;
     },
   },
 

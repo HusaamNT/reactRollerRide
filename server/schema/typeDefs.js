@@ -26,10 +26,6 @@ const typeDefs = gql`
     title: String!
     post: String!
   }
-  type Weather {
-    temp: String
-    weather: String
-  }
   type Auth {
     token: ID!
     user: User!
@@ -40,7 +36,6 @@ const typeDefs = gql`
     getAllPackages: [Packages]
     getAllBlogs: [Blog]
     getOneBlog(_id: ID!): Blog
-    getWeather(location: String): [Weather]
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
