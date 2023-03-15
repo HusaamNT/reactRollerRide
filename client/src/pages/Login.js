@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
-import rollerImage from "../assets/all-images/img5.jpg";
 import AuthService from "../utils/AuthService";
+import Helmet from "../components/Helmet/Helmet";
+import CommonSection from "../components/UI/CommonSection";
+
+
 
 function Login() {
-    const style = {
-        backgroundImage: `url(${rollerImage})`,
-    };
+    
 
     return (
-        <div style={style} className="hero d-flex align-items-center">
+       <Helmet>
+        <CommonSection title="Login" />
+        <div className="hero d-flex align-items-center">
             <div className="container-lg bring-to-front">
                 <div className="row">
                     <div className="col-12 col-md-6">
@@ -30,6 +33,7 @@ function Login() {
                 </div>
             </div>
         </div>
+        </Helmet>
     );
 }
 
