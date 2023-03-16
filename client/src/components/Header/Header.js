@@ -13,7 +13,7 @@ const navLinks = [
     display: "About",
   },
   {
-    path: "/rides",
+    path: "/tickets",
     display: "Rides",
   },
 

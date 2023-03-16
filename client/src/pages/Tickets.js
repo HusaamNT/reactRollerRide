@@ -1,6 +1,8 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
 import { GET_TICKETS } from "../utils/Quries";
+import Helmet from "../components/Helmet/Helmet";
+import CommonSection from "../components/UI/CommonSection";
 
 function Tickets () {
 
@@ -11,8 +13,10 @@ function Tickets () {
     } else {
         const tickets = data.getAllPackages;
         return (
+            <Helmet>
+                <CommonSection title="Tickets" />
         <div className="container-lg">
-            <h1>Tickets</h1>
+        
             <div className="row g-2">
             {tickets.map(it => {
                 return (
@@ -27,6 +31,7 @@ function Tickets () {
             })}
             </div>
         </div>
+        </Helmet>
         )
     }
 }
