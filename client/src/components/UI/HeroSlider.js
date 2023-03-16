@@ -54,7 +54,7 @@ Anyone wishing to visit, including Passholders will need to pre-book a ticket in
 Anyone wishing to visit, including Passholders will need to pre-book a ticket in advance. If the date is unavailable on the calendar, that date is unfortunately sold out. Book early to guarantee the best price for your ticket</h5>
 
             <button className="btn reserve__btn mt-4">
-              <Link to="/rides">Book</Link>
+              <Link to="/tickets">Book</Link>
             </button>
           </div>
         </Container>
