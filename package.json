@@ -8,6 +8,20 @@
   },
   "dependencies": {
     "concurrently": "^7.6.0",
-    "moongoose": "^0.0.5"
+    "gh-pages": "^5.0.0",
+    "mongoose": "^0.0.5"
+  },
+  "name": "reactrollerride",
+  "version": "1.0.0",
+  "description": "Themepark website",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HusaamNT/reactRollerRide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HusaamNT/reactRollerRide/issues"
   }
 }
