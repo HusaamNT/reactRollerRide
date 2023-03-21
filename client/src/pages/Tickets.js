@@ -3,7 +3,7 @@ import React from "react";
 import { GET_TICKETS } from "../utils/Quries";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
-import { Container, Row, Col } from "reactstrap";
+
 
 function Tickets () {
 
